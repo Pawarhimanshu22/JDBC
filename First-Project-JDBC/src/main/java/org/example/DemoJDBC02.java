@@ -3,7 +3,7 @@ package org.example;
 
 import java.sql.*;
 
-public class DemoJDBC {
+public class DemoJDBC02 {
 
     public static void main(String[] args)
     {
@@ -16,7 +16,7 @@ public class DemoJDBC {
         6. Execute Statement
         7. close connection
          */
-String url = "jdbc:mysql://localhost:3306/jdbcdb";
+String url = "jdbc:mysql://localhost:3306/JDBCDB";
 /*
 Steps to writing URL
 1. name jisako connect karana hai usaka or java jisaki help se connectho raha hai
@@ -29,7 +29,7 @@ String userName = "root";
 
 String password = "@#IFeelLikeKing22";
 
-String query = "select * from student";
+String query = "select * from Students";
 
         try
         {
@@ -51,12 +51,13 @@ String query = "select * from student";
 
             while (resultSet.next()) {
                 // Process and print each row
-                int id = resultSet.getInt("id");
-                String name = resultSet.getString("name");
-                String city = resultSet.getString("city");
+                int RollNumber = resultSet.getInt("RollNumber");
+                String Name = resultSet.getString("Name");
+                String City = resultSet.getString("City");//here i only fetchedd data and storing into variables from database by calling resultset
                 // Add more columns as needed
-                System.out.println("ID: " + id + ",    Name: " + name + ",   city: " + city
-                );
+
+                System.out.println("ID: " + RollNumber + ",    Name: " + Name + ",   city: " + City
+                );//Here i am printing those data
             }
 
            connectiopn.close();

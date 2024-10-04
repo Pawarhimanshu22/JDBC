@@ -4,7 +4,7 @@ package org.example;
 import java.sql.*;
 
 
-public class FirstLecture
+public class FirstLecture01
 {
     public static String Load_Driver  = "com.mysql.cj.jdbc.Driver";
 
