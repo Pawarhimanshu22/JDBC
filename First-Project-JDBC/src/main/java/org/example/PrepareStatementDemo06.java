@@ -27,6 +27,7 @@ public class PrepareStatementDemo06
             Connection connection = DriverManager.getConnection(URL,USER_NAME,PASSWORD);
 
             /**
+             
           String query = "Delete from Students where RollNumber = ?"; //RollNumber number ki jagar / lagaya h kisaka matlab default parameter h
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
