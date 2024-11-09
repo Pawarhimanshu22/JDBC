@@ -53,11 +53,12 @@ String query = "select * from Students";
                 // Process and print each row
                 int RollNumber = resultSet.getInt("RollNumber");
                 String Name = resultSet.getString("Name");
-                String City = resultSet.getString("City");//here i only fetchedd data and storing into variables from database by calling resultset
+                String City = resultSet.getString("City");//here i only fetched data and storing into variables from database by calling resultset
                 // Add more columns as needed
 
                 System.out.println("ID: " + RollNumber + ",    Name: " + Name + ",   city: " + City
-                );//Here i am printing those data
+                );
+                //Here i am printing those data
             }
 
            connectiopn.close();
